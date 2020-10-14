@@ -1,22 +1,21 @@
-import React from 'react'
+import React, { Component } from 'react'
+import Features from './components/Features/Features'
+import Footer from './components/Footer/Footer'
+import Header from './components/Header/Header'
+import Main from './components/Main/Main'
+import './style.css'
 
-function App() {
-	return (
-		<div className='App'>
-			<header className='App-header'>
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className='App-link'
-					href='https://reactjs.org'
-					target='_blank'
-					rel='noopener noreferrer'>
-					Learn React
-				</a>
-			</header>
-		</div>
-	)
+class App extends Component {
+	render() {
+		return (
+			<>
+				<Header />
+				<Main />
+				<Features />
+				<Footer />
+			</>
+		)
+	}
 }
 
 export default App
