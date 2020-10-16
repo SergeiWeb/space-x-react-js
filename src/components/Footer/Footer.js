@@ -1,61 +1,55 @@
-import React, { Component } from 'react'
+import React from 'react'
 import logo from '../../logo.svg'
 import './footer.css'
 
-class Footer extends Component {
-	render() {
-		return (
-			<footer className='footer'>
-				<img src={logo} alt='logo Space X' className='logo' />
-				<nav className='footer-nav'>
-					<ul className='list'>
-						<li className='item'>
-							<a
-								href='/'
-								rel='noopener noreferrer'
-								target='_blank'
-								className='item-link'>
-								Elon Musk Twitter
-							</a>
-						</li>
-						<li className='item'>
-							<a
-								href='/'
-								rel='noopener noreferrer'
-								target='_blank'
-								className='item-link'>
-								Twitter
-							</a>
-						</li>
-						<li className='item'>
-							<a
-								href='/'
-								rel='noopener noreferrer'
-								target='_blank'
-								className='item-link'>
-								Flickr
-							</a>
-						</li>
-						<li className='item'>
-							<a
-								href='/'
-								rel='noopener noreferrer'
-								target='_blank'
-								className='item-link'>
-								Website
-							</a>
-						</li>
-					</ul>
-				</nav>
-				<p className='footer-text'>
-					For additional questions, contact
-					<a className='footer-link' href='mailto:rideshare@spacex.com'>
-						rideshare@spacex.com
+const Footer = ({
+	links: { elon_twitter: elonMaskTwitter, twitter, flickr, website },
+	summary,
+}) => (
+	<footer className='footer'>
+		<img src={logo} alt='logo Space X' className='logo' />
+		<nav className='footer-nav'>
+			<ul className='list'>
+				<li className='item'>
+					<a
+						href={elonMaskTwitter}
+						rel='noopener noreferrer'
+						target='_blank'
+						className='item-link'>
+						Elon Musk Twitter
 					</a>
-				</p>
-			</footer>
-		)
-	}
-}
+				</li>
+				<li className='item'>
+					<a
+						href={twitter}
+						rel='noopener noreferrer'
+						target='_blank'
+						className='item-link'>
+						Twitter
+					</a>
+				</li>
+				<li className='item'>
+					<a
+						href={flickr}
+						rel='noopener noreferrer'
+						target='_blank'
+						className='item-link'>
+						Flickr
+					</a>
+				</li>
+				<li className='item'>
+					<a
+						href={website}
+						rel='noopener noreferrer'
+						target='_blank'
+						className='item-link'>
+						Website
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<p className='footer-text'>{summary}</p>
+	</footer>
+)
 
 export default Footer
