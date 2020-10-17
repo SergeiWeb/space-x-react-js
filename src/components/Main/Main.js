@@ -8,10 +8,10 @@ const video = {
 	other: 'space',
 }
 
-const Main = ({ rocket }) => {
-	return (
-		<section className='main'>
-			<h1 className='title'>{rocket}</h1>
+const Main = ({ rocket, name }) => (
+	<section className='main'>
+		<h1 className='title'>{name || rocket}</h1>
+		{rocket && (
 			<div className='video-container'>
 				<video
 					className='video'
@@ -23,8 +23,8 @@ const Main = ({ rocket }) => {
 					}.mp4`}
 				/>
 			</div>
-		</section>
-	)
-}
+		)}
+	</section>
+)
 
 export default Main
