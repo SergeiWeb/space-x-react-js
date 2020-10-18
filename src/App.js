@@ -63,7 +63,7 @@ class App extends Component {
 
 				<Route
 					path='/rocket'
-					render={
+					render={() =>
 						this.state.rocketFeatures && (
 							<Features {...this.state.rocketFeatures} />
 						)

@@ -28,12 +28,19 @@ const Header = props => {
 			<nav className='secondary-nav'>
 				<ul className='list'>
 					<li className='item'>
-						<NavLink exact to='/' className='item-link' activeClassName='active'>
+						<NavLink
+							exact
+							to='/'
+							className='item-link'
+							activeClassName='active'>
 							Home
 						</NavLink>
 					</li>
 					<li className='item'>
-						<NavLink to='/calendar' className='item-link' activeClassName='active'>
+						<NavLink
+							to='/calendar'
+							className='item-link'
+							activeClassName='active'>
 							Calendar
 						</NavLink>
 					</li>
